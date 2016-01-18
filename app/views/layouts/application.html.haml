@@ -1,0 +1,31 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    %meta(name="author" content="Catamorphic Labs, LLC")
+    %meta(name="description" content="Childwork - teach your children the value of work!")
+    = csrf_meta_tags
+
+    %title Childwork &mdash; teach your children the value of work!
+
+    = stylesheet_link_tag "application"
+
+  %body
+    %nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          = link_to "Childwork", "#", class: "navbar-brand"
+
+    .container
+      = yield
+
+      %hr
+
+      %footer
+        .row
+          .col-lg-12
+            Copyright &copy;
+            = link_to "Catamorphic Labs, LLC", "http://www.catamorphiclabs.com"
+            2015 &ndash; #{Date.current.year}
